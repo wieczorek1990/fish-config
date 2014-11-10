@@ -1,4 +1,5 @@
 #!/usr/bin/env fish
-git clone git@github.com:wieczorek1990/fish-config.git
 mkdir -p ~/.config/
-mv fish-config ~/.config/fish
+cd ~/.config
+cp -r fish fish.bak
+git clone git@github.com:wieczorek1990/fish-config.git fish
