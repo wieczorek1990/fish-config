@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+git clone git remote add origin git@github.com:wieczorek1990/fish-config.git
+mkdir -p ~/.config/
+mv fish-config ~/.config/fish
