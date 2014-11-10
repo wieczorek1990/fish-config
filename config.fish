@@ -1,16 +1,12 @@
-set fish_function_path $fish_function_path (find ~/.config/fish/functions/* -type d)
+set fish_function_path $fish_function_path ~/.config/fish/functions/*/
 set fish_greeting
 set -x EDITOR vi
+set -x NVM_DIR ~/.nvm
+set -x JAVA_HOME /usr/lib/jvm/jdk1.9.0
 # Waiting for rvm team to fix PATH issue
-set PATH ~/.linuxbrew/bin/ $PATH
-complete -c download -a '(__fish_print_packages)'
-complete -c purge -a '(__fish_print_packages)'
-complete -c search -a '(__fish_print_packages)'
-complete -c show -a '(__fish_print_packages)'
-complete -c simi -a '(__fish_print_packages)'
-complete -c simp -a '(__fish_print_packages)'
-function fish_user_key_bindings
-  bind \e\[3\;3~ kill-word
+set PATH ~/.linuxbrew/bin ~/.nvm /opt/android-sdk-linux/tools $PATH
+for cmd in download purge search show simi simp
+  complete -c $cmd -a '(__fish_print_packages)'
 end
 rvm default
 
