@@ -7,6 +7,6 @@ function installed
   dpkg --get-selections |\
   grep -v 'deinstall' |\
   cut -f 1 |\
-  grep '^'$argv[1]'$'
+  grep $argv[1]
 end
 
