@@ -30,7 +30,7 @@ function in
       set packages (apt-get -s install $force $package |\
                     grep '^Inst' |\
                     cut -d ' ' -f 2)
-      if test -n $packages
+      if test -n "$packages"
         echo $packages > $log
       end
     end
