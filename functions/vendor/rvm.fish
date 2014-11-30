@@ -7,7 +7,6 @@ function rvm --description='Ruby enVironment Manager'
   and eval (grep '^rvm\|^[^=]*PATH\|^GEM_HOME' $env_file | grep -v '_clr=' | sed '/^[^=]*PATH/s/:/" "/g; s/^/set -xg /; s/=/ "/; s/$/" ;/; s/(//; s/)//')
   # Waiting for rvm team to fix PATH issue
   set PATH \
-      ~/Scripts/ \
       /opt/libwebp/bin/ \
       /opt/android-sdk-linux/tools/ \
       /opt/android-sdk-linux/platform-tools/ \
