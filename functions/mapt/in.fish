@@ -30,8 +30,10 @@ function in
       set packages (apt-get -s install $force $package |\
                     grep '^Inst' |\
                     cut -d ' ' -f 2)
-      if test -n $packages
-        echo $packages > $log
+      if test -n "$packages"
+        echo $packages | tr ' ' '\n' > $log
+      else
+        return
       end
     end
   end

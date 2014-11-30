@@ -9,6 +9,7 @@ function rvm --description='Ruby enVironment Manager'
   set PATH \
       /opt/libwebp/bin \
       /opt/android-sdk-linux/tools \
+      /opt/android-sdk-linux/platform-tools/ \
       $PATH
   # clean up
   rm -f $env_file
