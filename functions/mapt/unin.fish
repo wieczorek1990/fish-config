@@ -7,7 +7,9 @@ function unin
     else
       sudo apt-get --purge autoremove $package
     end
-    rm -f $log
+    if test $status -eq 0
+      rm -f $log
+    end
   end
 end
 
