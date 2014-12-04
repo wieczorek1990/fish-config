@@ -10,6 +10,7 @@ set -x PATH \
        /opt/android-sdk-linux/platform-tools/ \
        $PATH
 set -x TERM screen-256color
+set -x TERMINFO ~/.terminfo
 for cmd in download purge search show simi simp in unin
   complete -c $cmd -a '(__fish_print_packages)'
 end
