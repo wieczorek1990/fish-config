@@ -37,6 +37,6 @@ function in
       end
     end
   end
-  sudo apt-get install $force $argv
+  sudo apt-get install $force $args
 end
 

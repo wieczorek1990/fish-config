@@ -4,11 +4,11 @@ function unin
     if test -f $log
       set packages (cat $log)
       sudo apt-get purge $packages
+      if test $status -eq 0
+        rm -f $log
+      end
     else
       sudo apt-get --purge autoremove $package
-    end
-    if test $status -eq 0
-      rm -f $log
     end
   end
 end
