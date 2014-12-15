@@ -26,13 +26,15 @@ function in
       set filename $as
     end
     set log ~/.packages/{$filename}
-    if not test -f $log; or test -n $as
+    if begin not test -f $log; or test -n $as end
       set packages (apt-get -s install $force $package |\
                     grep '^Inst' |\
                     cut -d ' ' -f 2)
       if test -n "$packages"
-        echo $packages | tr ' ' '\n' > $log
+        echo 'not'
+        echo $packages | tr ' ' '\n' >> $log
       else
+        echo 'ret'
         return
       end
     end
