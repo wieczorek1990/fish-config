@@ -7,8 +7,8 @@ set -x GOROOT /opt/go
 set -x JAVA_HOME /usr/lib/jvm/jdk1.8.0_25
 set -x PATH \
        $JAVA_HOME \
-       ~/Software/android-sdk/tools
-       ~/Software/android-sdk/platform-tools
+       ~/Software/android-sdk/tools \
+       ~/Software/android-sdk/platform-tools \
        $PATH
 set -x TERM screen-256color
 set -x TERMINFO ~/.terminfo
