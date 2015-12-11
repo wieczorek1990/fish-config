@@ -3,13 +3,6 @@ set fish_function_path \
     $fish_function_path
 set fish_greeting
 set -x EDITOR vi
-set -x GOROOT /opt/go
-set -x JAVA_HOME /usr/lib/jvm/jdk1.8.0_25
-set -x PATH \
-       $JAVA_HOME \
-       ~/Software/android-sdk/tools \
-       ~/Software/android-sdk/platform-tools \
-       $PATH
 set -x TERM screen-256color
 set -x TERMINFO ~/.terminfo
 
@@ -21,4 +14,3 @@ set user_config ~/.config/fish/user_config.fish
 if test -e $user_config
   source $user_config
 end
-
