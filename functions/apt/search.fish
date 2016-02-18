@@ -1,4 +1,4 @@
 function search
-  apt-cache search $argv
+  apt-cache search --names-only $argv
 end
 
