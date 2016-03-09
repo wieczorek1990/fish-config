@@ -1,4 +1,4 @@
 function tl
-  command tree -C -L $argv
+  tree -L $argv
 end
 
