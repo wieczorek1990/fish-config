@@ -1,4 +1,4 @@
 function suspend
-  sudo systemctl suspend $argv
+  systemctl suspend -i $argv
 end
 
