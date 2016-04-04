@@ -1,6 +1,3 @@
-set fish_function_path \
-    ~/.config/fish/functions/*/ \
-    $fish_function_path
 set fish_greeting
 set -x EDITOR vi
 set -x PAGER less
