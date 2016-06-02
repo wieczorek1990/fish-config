@@ -1,4 +1,4 @@
 function di
-  dpkg -i $argv
+  sudo dpkg -i $argv
 end
 
