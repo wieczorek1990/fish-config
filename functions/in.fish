@@ -27,7 +27,7 @@ function in
     end
     set log ~/.packages/{$filename}
     if begin not test -f $log; or test -n $as; end
-      set packages (apt-get -s install $force $package |\
+      set packages (sudo apt-get -s install $force $package |\
                     grep '^Inst' |\
                     cut -d ' ' -f 2)
       if test -n "$packages"
