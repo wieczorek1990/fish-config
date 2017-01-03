@@ -1,4 +1,4 @@
 function r
-  trash $argv
+  rm -rf $argv
 end
 

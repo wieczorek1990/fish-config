@@ -1,4 +1,4 @@
-function fish_prompt --description 'Write out the prompt'
+function fish_prompt --description 'Echoes the prompt'
   set_color $fish_color_cwd
   echo -n (whoami)' '(prompt_pwd)' '
   set_color normal
