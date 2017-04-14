@@ -1,4 +1,4 @@
 function octave
-  command octave --quiet $argv
+  octave-cli --quiet $argv
 end
 

@@ -1,4 +1,4 @@
-function gr
-  grep --color=always -R $argv *
+function g
+  grep -R $argv *
 end
 
